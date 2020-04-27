@@ -1,0 +1,70 @@
+/*          Functions[methods]                  */
+?
+/* Definition->
+ 
+ A function is a block of code which is used to perform a 
+ perticular[specific] task.
+   
+*/
+?
+/*
+   |---------------------function/method  declration---------------| 
+   |  access     access      return   function[method] (arguments  | 
+   | specifiers modifiers     type        name          list)      |  
+-------function[method] body/scope/definiton-----------------
+    {
+   	
+	
+?
+       lines of codes/bussienes logic/instructions...
+                 return;
+      
+    }
+-----------------------------------------------------------
+*/
+/*
+?
+-> access specifiers along with access modifiers,return type,
+function name and aeguments list constitues to function[method]
+declration.
+?
+->body/scope of the function[method] is called as definition.
+?
+->access specifiers are of 4 types
+  1] public ---- as of now this is mostly used
+  2] protected
+  3] package-level[no keyword]
+  4] private
+?
+ -> access modifiers are of 2 types
+  1] static ---- as of now this mostly used.
+  2] non-static[no keyword]
+?
+-> Fuction cannot be written inside another function.
+-> Function should always be written inside a class but outside other
+   functions.
+?
+->No function ever gets exe without calling it.
+->A function can be called only by a function which is under exe.
+->Function name along with arguments list is called as function
+  [menthod] call statement.
+  ->syntax
+     ->Function[method] name (arguments list); 
+
+date = 24_04_2020
+
+
+-> Calling Function[method]---------
+The function which is calling another function is know as calling function.
+?
+-> Called Function[method]---------
+The function which is being called by another function is called 
+as called function.
+?
+->Return statement------------
+Return statement is used to send the control back to the calling function.
+?
+-> return statement is mandatory w.r.t the program.
+-> return statement is optional w.r.t programmer when the return type of the program is void.
+->if the programmer doesn't write a return statement then the compiler writes it at the compile time.
+ 
