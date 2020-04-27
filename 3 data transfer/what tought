@@ -1,0 +1,107 @@
+/*          Functions[methods]                  */
+
+/* Definition->
+ 
+ A function is a block of code which is used to perform a 
+ perticular[specific] task.
+   
+*/
+
+/*
+   |---------------------function/method  declration---------------| 
+   |  access     access      return   function[method] (arguments  | 
+   | specifiers modifiers     type        name          list)      |  
+-------function[method] body/scope/definiton-----------------
+    {
+   	
+	
+
+       lines of codes/bussienes logic/instructions...
+                 return;
+      
+    }
+-----------------------------------------------------------
+*/
+/*
+
+-> access specifiers along with access modifiers,return type,
+function name and aeguments list constitues to function[method]
+declration.
+
+->body/scope of the function[method] is called as definition.
+
+->access specifiers are of 4 types
+  1] public ---- as of now this is mostly used
+  2] protected
+  3] package-level[no keyword]
+  4] private
+
+ -> access modifiers are of 2 types
+  1] static ---- as of now this mostly used.
+  2] non-static[no keyword]
+
+-> Fuction cannot be written inside another function.
+-> Function should always be written inside a class but outside other
+   functions.
+
+->No function ever gets exe without calling it.
+->A function can be called only by a function which is under exe.
+->Function name along with arguments list is called as function
+  [menthod] call statement.
+  ->syntax
+     ->Function[method] name (arguments list);
+
+-> Calling Function[method]---------
+The function which is calling another function is know as calling function.
+
+-> Called Function[method]---------
+The function which is being called by another function is called 
+as called function.
+
+->Return statement------------
+Return statement is used to send the control back to the calling function.
+
+-> return statement is mandatory w.r.t the program.
+-> return statement is optional w.r.t programmer when the return type of the program is void.
+->if the programmer doesn't write a return statement then the compiler writes it at the compile time.
+->return statement should always be written in the last line of the function definition.
+
+
+->local Variable-------------
+Any variable which is declared within the scope of function is called as local varible.
+
+->A local variable cannot be utilized without initializing it.
+->We can declare only one local variable per function scope.
+->Local variables can be accessable within the same scope.
+
+--------------- Data Transfer between functions -------------
+There are 2 types of data transfer between functions.
+
+->Data transfer from called function to calling function---------
+
+->The only link from called function to calling is _return statement_ 
+->Data can be transfered from called func to calling func only with the help of return statement.
+->control transfer by return statemnt is mandatory but data transfer is optional.
+->return statement can return a constant[true] or a variable reference.
+
+->return type----
+Return type is used to specify jvm what kind of value that function will be returning to the calling function.
+
+There are 3 catogories in return type.
+1] void.
+2] primitive data.
+3] non-primitive data.
+
+1] void -> when a function is declared with void as return type, it means called function is not gonna return any value to the calling function.
+
+2] primitive[byte->boolean] -> when a function is declared with any primitve datatype as return type, then it means that the called function is transfering the corresponding type of data to the calling function.
+
+3] non-primitive[class,interface,enum] -> when a function is declared with any non-primitive datatype as return type, then it means that the called function is transferring the corresponding type of reference to the calling function.
+
+-------------> Note <----------------
+-> the datatype of the value returned by the called function its return type must always match.
+-> the datatype of the valriable in which the retuned value is stored must match with the return type of the called function.
+->return statement can return only one value or variable reference.
+->mutiple return statements cannot be executed in a function.
+
+*/
