@@ -1,0 +1,114 @@
+-------------------- Class ----------------
+
+Defination
+-> A class is a confined boundry inside which we can write the instructions/lines of codes for the program to run/execute.
+or
+-> A class is a java entity which contains multiple entities like functions,variables,constructors,blocks etc.
+------------------------------------------------------------------------
+-> classes can be differentiated by the use of identifiers.
+-> A program can contain any number of classes.
+-> Compiler creates one .class file for ecah indivisual class in program.
+------------------------------------------------------------------------                       
+								 class members
+
+ 
+A class member can be data member[variables] or function member[methods] or a block member.              
+
+          class members typically contains two kinds of members.
+
+1>static class members.
+2>non-static class members.
+
+1>static class members
+-> Any data member[variables] or function member[methods] or a block member which is defined by using the keyword static are called as static class members.
+
+2>non-static class members.
+-> Any data member[variables] or function member[methods] or a block member which is not defined by using the keyword static is called as non-static class member.
+
+------------------------------------------------------------------------
+      Ways to access various class members present in a class
+
+asm1] Acessing static class members present in same class.
+
+-> we can access static class members present in same class by directly calling them using their names.
+note-> refer program asm1.java for example.
+--------------------------------
+asm2] Accessing static class members present in different class.
+
+-> we can access static class members present in different class by using the call name followed by dot operator and the member name.
+syntax - > className.memberName[data member/function member];
+note-> refer program asm2.java for example.
+--------------------------------
+ansm] Accessing non-static members present in different class.
+
+-> To access a non-static member we need to create an object for a class.
+   syntax
+   Object Creation statement.MemberName;
+
+-----Object-----
+Defination 
+-> An object is an java entity which contains all the non-static members of a class.
+
+Creation of an object
+-> we can create an object for a class with the help of [new] keyword.
+
+Object Creation statement.
+syntax
+new className();
+    |----------|     
+          |
+          ---> Constructor call statement.   
+
+->When jvm executes object creation statement. JVM will create an object in heep area by coping all the non-static member of a class into it.     
+
+Inside RAM inside Heep area
+        Object
+    ______________     
+   |              |
+   | non - static | 
+   |   variables  |
+   | non - static | 
+   |   functions  | 
+   |______________|
+
+-> we can access multiple non-static members of a class by using the same object's address.
+
+-> we can obtain the object's address with the help of Object creation statement.
+-> The object creation statement returns the address of an object.
+-> The address of an object is not primitive kind of data i.e it consists of a combination of alphanumeric with spl chars. 
+-> Address of an object cannot be stored in a primitive variable.
+
+-> Address of an object can be stored in a special kind of variable called as reference variable;
+----------------------------
+Reference variable
+
+Defination
+-> A reference variable is a spl type of variable which is designed to store the address of an object. 
+
+Creation of reference variable.
+syntax
+
+DataType refVarName;
+
+-> Datatype of a refernce variable is of class type i.e the data type is same name as the class name for whose address we try to store.
+
+-> for class type the default value is [null].
+
+---------------------------------------------------------------
+    Storing the address of an object in a reference variable
+
+step 1]
+create a reference variable 
+syntax
+
+  Datatype rewfVarName;
+
+step 2]
+create the object and store its adress in it's refvar
+syntax 
+  
+   refVarName = new className(); 
+
+-------------------------or--------------------
+
+ Datatype refVarName = new className();    

@@ -1,0 +1,128 @@
+---------------------------- Constructors -------------------------------
+
+Definaion
+-> A constructor is a kind of a function which has same name as the class.
+
+Creation
+
+->Synatx
+|-----------Constructor declaration-----------|
+|Access       ConstuctorName  (arguments List)|    
+|Specifier    (Class Name)                    |
+-----------------------------------------------
+{
+                                             Constructor
+  codes;                                 Body/Scope/Definition
+  return;
+}
+-----------------------------------------------
+
+-> Constructors cannot be accessed alone.They can only be called when an object for that class is created.
+-> Constructors can be executed multiple time by creating multiple objects.
+-> Constructors cannot return a value.However return statement is mandatory for a constructor body.But for the programmer it is optional.
+If the programmer ignores to write a return statement then the compiler at compile time writes it implecitly.
+
+------------------------------------------------------------------------
+                     Types of constructors
+
+Constructors are of two types
+
+1] Comiler defined constructor.[default constructor]
+2] Programmer defined constructor.
+
+-> Every class must and should have a Constructor. <-
+
+If the programmer doesnot write a constructor the the compiler writes a default constructor at the compile time. 
+
+1] Comiler defined constructor.[default constructor]
+Compiler at compile writes an plain contructor with zero arguments and public as the access specifier.
+
+Synatx:
+public className(){
+   	  return;
+   }
+
+note:- If the programmer writes a constructor implicitly then the compiler will never write a constructor explecitly.
+
+2] Programmer defined constructor.
+If a programmer writes a constructor before comile time then it is called programmer defined constructor.
+
+This programmer defined constructor is of two types
+a] zero parameterized[argumrnt] contructor.
+b] paramererized[argumented] contructor.
+
+a] zero parameterized[argumrnt] contructor.
+If a programmer creates a constructor without any input parameters or arguments then it is called zero parameterized[arguments] constructor.
+
+Synatx:
+public className(){
+      codes of lines;
+   	  return;
+   }
+note:- refer program Con1.java
+
+b] paramererized[argumented] contructor.
+If a programmer creates a constructor with inputt arguments pr parameters  then it is called parameterized[argumented] constructor.
+
+Synatx:
+public className(datatype formal param1[arg1], datatype formal para2[arg2]....etc ){
+      codes of lines;
+   	  return;
+   }
+
+Constructor call statement
+Syntax:
+new className(actual param1[arg1], actual para2[arg2]....etc ) 
+
+rules to tansfer data from the constructor call statemnt to the constructor.
+
+1] Number of Actual params[args] should match with formal params[args].
+2] Order of Actual params[args] should match with formal params[args].
+3] DataType of Actual params[args] should match with formal params[args].
+
+note:- refer program Con2.java
+
+->Compiler can create only zero argument empty body constructor.
+-----------------------------------------------------------------------
+Differences between Comiler defined constructor and Programmer defined Zero argument constructor
+
+        C.D.C                                     
+                                     
+ 1] This constructor is written by the compiler at compile time.        
+                                     
+ 2] The access specifier is always public.                                    
+  
+ 3] This constructor body only contains return statement.                                     
+                                     
+        P.D.Z.A.C                                    
+        
+ 1] This constructor is written by the programmer before compile time.
+
+ 2] The access specifier can be decided by the programmer.
+
+ 3] Programmer can write any code inside the constructor body. 
+
+-----------------------------------------------------------------------
+                    Application of a constructor
+
+Constructors have many applications one among them is stated below.
+
+-> Constructors can be used to initialize the data members of a class.
+note:-
+refer programs Con4.java and Con5.java                    
+---------------------------------------------------------------------------
+                           this keyword
+
+Defination 
+-> this keyword is special type of reference variable which will alwayas point towards the active inctence[object] of the class.
+
+note:- refer program thiskeyword1.java
+-------------------------------------------------------
+                       Application of this keyword
+
+-> this keyword helps to distinguish the global variables from local variable when both the global and local variables have same names.
+
+note:- this keyword can be used to point an object within it's own class.
+                                     
+                                     
+                                       

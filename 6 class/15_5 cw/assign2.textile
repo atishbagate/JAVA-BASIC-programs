@@ -1,0 +1,7 @@
+Create programs to prove the below points by using your own examples with object diagrams.
+
+Point 1] 
+When two reference variables are pointing towards two different objects then the changes done to one object from one reference variable will not affect the other object when accessed from another reference variable. 
+
+Point 2] 
+When two reference variables are pointing towards same object then the changes done to the object from one reference variable will affect the object when accessed from another reference variable.

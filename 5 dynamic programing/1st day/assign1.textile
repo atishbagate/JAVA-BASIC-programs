@@ -1,0 +1,3 @@
+-> Create 10 different programs to take 8 primitive and String and String with spaces by verifing them as suitable to their datatypes.
+
+

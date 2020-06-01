@@ -1,0 +1,82 @@
+---------------------------------- Blocks Notes --------------------------------------
+
+Defination 
+A block is a set of codes or instructions or statements which are enclosed within a pair of curly braces.
+
+-> Blocks can be associated with entities like functions,classes,constructors etc.
+-> Blocks can also exist independently.
+
+-> Independent Blocks a.k.a Blocks
+
+
+-> Blocks are majorly divided into 2 types
+
+1] static     blocks
+2] non-static blocks
+---------------------------------------------------------------------------------------
+
+1] static block or STATIC INITIALIZER BLOCKS [S.I.B]
+
+Any block which is decclred using the keyword static is known as a static block.
+
+syntax
+
+static{
+	
+	codes;
+	instructions;
+}
+
+-> we cannot name static blocks,hence we cannot call it.
+-> We can get the static block executed when .class file is loaded into the jvm memory.
+   we can load the .class file either by accessing a static member of that class or by creating the object for that class.
+refer program sb1.java
+
+-> static block will be executed imediatley after the .class file is loaded into jvm memory.
+refer program sb2.java
+
+-> static blocks cannot be written inside a function.
+
+-> static blocks can be executed only once because the .class file can be loaded only once into jvm memory.
+
+ 
+
+                         -> Application of satatic blocks <-   
+
+1] static blocks can be used to execute any mandatory statements as soon as the class is loaded into jvm memory.
+
+2] static blocks can be used to initialize the data members of a class. Hence the static blocks are aslo called as STATIC INITIALIZER BLOCKS [S.I.B].
+-> refer program sb3.java 
+
+                              -> NOTE <-
+                              
+-> We can access a static data member / function from a S.I.B directly.
+-> We can access a non-static data member / function from a S.I.B by creating an object.
+
+------------------------------------------------------------------------------------
+
+2] Non-static Block or Instance Initializier Block[I.I.B]
+
+Any block which is not declrared using static keyword is called as non-static block.
+
+syntax;-
+
+{
+	codes;
+	instructions;
+}
+
+-> We cannot name non-static blocks.
+-> We can only get non static blocks executed.
+-> Non-static blocks get executed when the object of the class is created.
+-> Number of time the non-static blocks getting executed is directly proportional to the number of objects created for that class.
+                             ->refer program nsb1.java<-
+
+                    -> Applications of non-static blocks<-
+
+1] Non-static blocks can be used to perform any mandatory task when ever the object of that class is created.    
+
+2] Non-static blocks also can be used for initializing the data members of a class.Hence it is called as Instance Initializier Block[I.I.B].                
+                             ->refer program nsb2.java<-
+----------------------------------------------------------------------------
+                              

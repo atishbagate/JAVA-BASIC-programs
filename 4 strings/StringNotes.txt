@@ -1,0 +1,61 @@
+Strings
+
+->Disadvantages of char variable
+1] char variable can store only one character at a time.
+2] size of the code become huge as the the number of characters needed to 
+be stores increases which makes it difficult t o handle.
+3] characters can be stored indivisualy but not in the form of a word
+or sentance.
+
+String defination
+-> A string is a group of characters which are held in double qoutes.
+->syntax to create a string
+ String varName = "value";
+*value can numbers,alphabets or any special characters.
+->A string var can store any number characters at a time.
+
+There are some built-in functions offered by String.
+
+1->char charAt(int index)
+
+This function is used to retrive a character from a perticular index.
+-> Note
+1]JVM throws java.lang.StringIndexOutOfBoundsException when we provide an 
+index value beyond the size of the String.
+2]JVM throws java.lang.StringIndexOutOfBoundsException when we provide an 
+index value negative.
+
+2->int length()
+This function is used to find the number of characters present in a String. 
+
+3->boolean equals(String s)
+This function is used to compare two string values by comparing their unicode of
+indivisual characters.
+
+4->boolean equalsIgnoreCase(String s)
+This function is used to compare two string values by comparing their unicode of
+indivisual characters by ignoring the case.
+
+5->char[] toCharArray()
+This function is used to convert the given STring into an array of characters.
+----------------------------------------------------------------------------------------
+String data transfer from called function to calling function.
+
+syntax 
+
+->return statement
+return String value/variable reference;
+-> called function declration
+a.s a.m String function/method name(a.l){
+}
+
+String data transfer from calling function to called function.
+
+syntax
+
+->method call statement
+functionName(String value/variable reference);
+->called function declration
+a.s a.m r.t functionName(String s){
+}
+

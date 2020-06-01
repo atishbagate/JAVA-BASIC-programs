@@ -1,0 +1,102 @@
+------------------------------- JVM Architecture --------------------------------------
+
+1] Class Loader
+-> It is a piece of software which is present in heep area.
+-> Class loader's job is to load all the .class files into jvm memory.
+-> It loads all the functions definitions inside the method area.
+-> It loads all the static data members and static function member's declrations in static pool. 
+
+2] Method Area
+-> It is a memory space in heep area where it is designed to store all the static and non-static function's definitions.
+
+3] Static Pool
+-> It is a memory space in heep area which is designed to store all the static data members and static function member's declrations.
+
+4] Stack Area[main stack]
+-> It is a memory space in heep area whic is used to execute the functions of a class.
+-> Which ever function is loaded first into stack area is unloaded at last.
+-> Each function is loaded into stack in the form of a frame.
+
+5] Binder
+-> It is a piece of software present in heep area.
+-> It combines the static and non-static function declrations with their definitions and load inside the stack area[main stack] for execution by creating a frame.
+-> After the execution of the function the binder unloads the function from the stack area[main stack] and places the definitions back in method area and the static declrations inside static pool and the non-static declration inside the objects.
+
+6] Garbage Collector
+-> It is a piece of software present in Heep Area.
+-> It removes the objects from the heep area before the program ends it's execution.
+
+7] Heep Area
+-> Heep Area contains all the non-static data members and non-static function member's declrations.
+-> If objects are created in programs those objects are occupied in heep area.
+
+Program  Work flow in JVM Memory
+
+1] We write the program in the text editor which saves it with .java[jvmprogram.java] extention.
+
+2] We invoke the compiler with javac command and make it compile the .java
+[jvmprogram.java] file. Compiler verifies the syntax and and generate the corresponding .class[{Alpha.class},{Bravo.class}] files depending upon the number classes present in the .java[jvmprogram.java] file.
+
+3] We invoke jvm with java command and make jvm run the .class[Alpha.class] file
+which contains main function[method] inside it.
+
+4] JVM will call the class loader and tell it to load all the function definitions to the method area and all the static data members and function member's declrations to the static pool's class area.
+
+5] After the .class[Alpha.class] is loaded into jvm memory by the class loader, JVM imideatly calls the binder and tell it to bind the main function's declratation with it's definition and load it to the stack area by creating a frame[frame 0].
+
+6] Afer the main function's frame is loaded into the stack area, jvm starts executing line by line.
+
+7] JVM executes line 4.
+  ->System.out.println("main starts").
+
+8] JVM excutes line 6.
+  -> System.out.println("static data1 = "+Bravo.data1);   
+  -> JVM will imidiatley search for Bravo class area in the static pool, 
+  if it is not present jvm calls class loader to load the Bravo.class file into jvm memory.
+  -> JVM will search for var data1 in class area Bravo[address] and retrive the value and print it.
+
+9]  JVM executes line 7.
+   Bravo b1 = new Bravo();
+   -> JVM will create an object for class Bravo and copy all the non-static data members and non-static function member's declrations to it.
+
+10] JVM executes line 8.
+   -> System.out.println("non-static data2 = "+b1.data2); 
+   -> JVM finds the variable b1 and searches for variable data 2 in the Bravo object and retrives it and prints.
+
+11] JVM executes line 9.
+   -> Bravo.albert();
+   -> JVM will screch for the function declration in class area Bravo, As soon as jvm finds it it calls binder and tells it to load the function albert by comining the albert definition from method area and it's declration from static pool's Bravo class area and load it to the stack by creating a frame[frame1]. 
+   -> After the function albert is executed the binder removes the frame form the stack and put's back the definition to the method area and the declration back to the Bravo class area.
+
+12] JVM executes line 10.
+    -> Bravo b1 = new Bravo();
+    -> JVM will create an object for class Bravo and copy all the non-static data members and non-static function member's declrations to it. 
+
+13] JVM executes line 11;
+    -> b2.isaac();
+    -> JVM will search for the object pointed by b2 as soon if finds the isaac function declration it calls the binder to bind the isaac function definition present in method with it's declration present in object pointed by b2 and loads it into the stack area by creating a frame[frame 1].
+    -> After the frame[frame 1] is loaded jvm  executes function isaac and later calls the binder to removes the frame form the stack and put back the definition to the method area and the declration back to the Bravo class object pointed by b2. 
+
+14] JVM executes line 13.
+    -> System.out.println("main ends...");  
+
+15] JVM executes line 14.
+    -> return;
+    -> JVM encounters this return statement tells the binder to remove the frame[frame 0] from the stack area and put it's declration back to class area[Alpha] and the definition back to method area.
+
+16] JVM calls class loader to remove all the definitions from the method area and all the static datamembers and static function member's declrations from the static pool.  
+
+17] JVM calls garbage collector to remove all the objects from the heep area. 
+
+18] JVM Shuts down.
+
+Observations in JVM Architecture and program work flow.
+
+1] JVM will ask class loader to load the .class files only when an member of the class is accessed or an object of the class is created. Doing so it reduces the burden on jvm when there are lots of .class files present. 
+
+2] static class members get loaded into jvm memory only once.
+Hence static class members will have only one copy.
+
+3] non-static class members have multiple copies based on the number of objects   created.
+
+

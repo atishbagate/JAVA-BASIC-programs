@@ -1,0 +1,98 @@
+Types of programs
+
+1]Static programs
+A program which runs on static inputs that are given at the compile time are know as static programs.
+These static inputs cannot be changed at runtime.
+
+2]Dynamic programs
+A program which runs on dynamic inputs that are given at the runtime
+are know as dynamic programs.
+
+We can provide dynamic inputs to a program at runtime using a concept called as Scanner class.
+
+1] Scanner class belong to a package called java.util.
+hence we need to import this package to our program by using import statement.
+
+-> import java.util.Scanner;
+note: this statement should always be written outside a class.
+
+2] We need to create an object for Scanner class by passing the static variable [in] present System class to the Scanner class constructor. 
+
+-> Scanner varName = new Scanner(System.in);
+
+a) To take byte input
+-> varName.nextByte();
+this function returns a byte value.
+
+To varify the input is byte or not 
+-> varName.hasNextByte()
+this function returns boolean.
+
+a) To take short input
+-> varName.nextShort();
+this function returns a short value.
+
+To varify the input is byte or not 
+-> varName.hasNextShort()
+this function returns boolean. 
+
+c) To take int input
+-> varName.nextInt();
+this function returns a int value.
+
+To varify the input is byte or not 
+-> varName.hasNextInt()
+this function returns boolean. 
+
+d) To take long input
+-> varName.nextLong();
+this function returns a long value.
+
+To varify the input is byte or not 
+-> varName.hasNextLong()
+this function returns boolean. 
+
+e) To take float input
+-> varName.nextFloat();
+this function returns a float value.
+
+To varify the input is byte or not 
+-> varName.hasNextFloat()
+this function returns boolean. 
+
+g) To take long input
+-> varName.nextLong();
+this function returns a long value.
+
+To varify the input is long or not 
+-> varName.hasNextLong()
+this function returns boolean. 
+
+i)To take boolean input
+-> varName.nextBoolean();
+this function returns a boolean value.
+
+To varify the input is boolean or not 
+-> varName.hasNextBoolean()
+this function returns boolean. 
+
+To take String input until space
+->varName.next();
+This function returns a String value.
+This function can take the caharacters until it comes across a space.
+
+To take String input including spaces
+->varName.nextLine();
+This function returns a String value.
+This function can take the caharacters including if it comes across a space.
+
+j)To take character input
+-> String var = varName.next();
+   var.charAt(0);
+       --------or--------
+   varName.next().charAt(0);
+this function returns a character value.
+
+
+
+

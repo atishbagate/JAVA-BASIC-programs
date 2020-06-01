@@ -1,0 +1,31 @@
+------------------------------- JVM Architecture --------------------------------------
+
+1] Class Loader
+-> It is a piece of software which is present in heep area.
+-> Class loader's job is to load all the .class files into jvm memory.
+-> It loads all the functions definitions inside the method area.
+-> It loads all the static data members and static function member's declrations in static pool. 
+
+2] Method Area
+-> It is a memory space in heep area where it is designed to store all the static and non-static function's definitions.
+
+3] Static Pool
+-> It is a memory space in heep area which is designed to store all the static data members and static function member's declrations.
+
+4] Stack Area[main stack]
+-> It is a memory space in heep area whic is used to execute the functions of a class.
+-> Which ever function is loaded first into stack area is unloaded at last.
+-> Each function is loaded into stack in the form of a frame.
+
+5] Binder
+-> It is a piece of software present in heep area.
+-> It combines the static and non-static function declrations with their definitions and load inside the stack area[main stack] for execution by creating a frame.
+-> After the execution of the function the binder unloads the function from the stack area[main stack] and places the definitions back in method area and the static declrations inside static pool and the non-static declration inside the objects.
+
+6] Garbage Collector
+-> It is a piece of software present in Heep Area.
+-> It removes the objects from the heep area before the program ends it's execution.
+
+7] Heep Area
+-> Heep Area contains all the non-static data members and non-static function member's declrations.
+-> If objects are created in programs those objects are occupied in heep area.

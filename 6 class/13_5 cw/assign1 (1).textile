@@ -1,0 +1,5 @@
+create a class Pet which will contain the type,name,breed,age,height of a pet and the functions like feeding,bathing and walking. 
+create another Owner class with main function to access all there data and purform these functions.
+
+1] In pet class all the data and function members should be static.
+2] In pet class all the data and function members should be non-static.
