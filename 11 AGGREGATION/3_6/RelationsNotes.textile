@@ -1,0 +1,46 @@
+---------------------------- Relations ---------------------------------------
+
+A relation is a connection or a bond or a link between two or more entities like classes or interfaces or abstract classes.
+
+-> Java Has two major kinds of relations
+
+1] Association [Has-A] relation.
+2] Inheritance [Is-A] relation.
+
+------------------------------------------------------------
+
+1] Association [Has-A] relation.
+
+Association is just a relation between two classes which are connected with the help of their respective objects.
+
+ex:
+2 preople            
+                       weaker relation                    Stonger relation
+friendship             ramesh---> friend              ramesh---> best friend      
+                       suresh---> best friend         suresh---> best friend
+
+Association is divided into to types based on the dependency
+
+a] Weaker Has-A relation     [Aggregation]
+b] Stronger Has-A relation   [Composition]
+
+-------------------------------------------------------------------
+
+1] Weaker Has-A relation     [Aggregation]
+It is a kind of relation in which the existance of one enitity is not mutually dependent on the existance of the other entity.
+
+It's an unidirectional relationship
+
+exmaple:- refer program Aggregation.java
+
+               GoogleAcc -----xxxx----> PlayStore
+                         <-------------
+-------------------------------------------------------------------
+
+2] Stronger Has-A relation [Composition]
+It is a kind of relation in which the existance of one entity is mutally dependent on the existance of other entity.
+
+It's bidirectional relationship
+
+exmaple :-
+           
