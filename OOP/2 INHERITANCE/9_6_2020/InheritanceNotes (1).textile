@@ -1,0 +1,13 @@
+---------------------- Inheritance Notes ----------------------
+
+3] Hierarchical Inheritance
+It is a kind of inheritance where two or more subclasses inherit
+the properties from one common superclass. 
+
+Hierarchical inheritance can be achieved in 2 steps
+
+a] Generalization
+It is a process of collection the common properties of all subclasses and putting them under one common superclass.
+
+b] Specialization
+It is a process of developing specific properties to specific subclasses. 

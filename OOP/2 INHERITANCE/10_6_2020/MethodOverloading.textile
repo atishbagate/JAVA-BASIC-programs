@@ -1,0 +1,12 @@
+------------------------------------ Method overloading ------------
+
+Definition
+It's a process of developing multiple functions with same name but which differ in 
+a] number of arguments
+b] order of arguments
+c] datatype of arguments
+
+Application
+Method overloading provides multiple options to pass arguments for the same function.
+
+Maintain proper documentation regarding each overloaded function
