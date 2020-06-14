@@ -1,0 +1,18 @@
+---------------------------- Method overriding -----------------------------
+
+Definition
+
+Method overriding is a process in which a subclass extends the superclass and inherits the superclass function by changing the method definition without changing the method declration.
+
+Note:-
+-> For method overriding inheritance is mandatory.
+
+Annotation
+-> An annotation is a extra saftey provided by the language to perform a perticular task.
+
+For method overriding we can use the ->@Override<- for method overriding.
+this annotation should always be used in the subclass where the function is overrriden.
+
+-> The access specifier of the overloaded function can be changed based on some rules which will be stated in access specifier class.
+
+----> Method overloading and method overriding can be implemented in all the 5 types of inheritances.

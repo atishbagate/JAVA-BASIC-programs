@@ -1,0 +1,18 @@
+---------------- Method overloading ------------
+
+Definition
+It's a process of developing multiple functions with same name within the same class or sub class but which differ in 
+a] number of arguments
+b] order of arguments
+c] datatype of arguments
+
+Application
+Method overloading provides multiple options to pass arguments for the same function.
+
+Note:-
+
+1]Maintain proper documentation regarding each overloaded function.
+
+2] Two overloaded function can be static within the same class or the sub class. 
+- ref prog methodoverloading4.java
+

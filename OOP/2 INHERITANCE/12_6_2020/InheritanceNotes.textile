@@ -1,0 +1,31 @@
+---------------------- Inheritance Notes ----------------------
+
+3] Hierarchical Inheritance
+It is a kind of inheritance where two or more subclasses inherit
+the properties from one common superclass. 
+
+Hierarchical inheritance can be achieved in 2 steps
+
+a] Generalization
+It is a process of collection the common properties of all subclasses and putting them under one common superclass.
+
+b] Specialization
+It is a process of developing specific properties to specific subclasses. 
+----------------------------------------------------------------
+4] Multiple Inheritance
+It is a kind of inheritance in which one subclass inherits the properites from two or more superclasses.
+
+-->Multiple inheritance cannot be achieved in java using the concept of classes,abstract classes but can be achieved with the help of interface.<----
+----------------------------------------------------------------
+
+5] Hybrid inheritance
+It is a combination of single,multilevel,hierarchical and multiple inheritances.
+- ref prog Alpha.java and Bravo.java
+
+
+
+Note:-
+
+Every class in java directly or indirectly inherits properties from Object class.
+
+if the programmer deosn't write extends Object implicitly then the compiler writes explicitly at comile time.
