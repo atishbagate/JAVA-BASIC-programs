@@ -1,0 +1,40 @@
+-------------------------------------- JDK Enhancements 8 ----------------------------------
+​
+1 ] Java Provides two special types of interfaces.
+a] Marker interface
+b] Functional interface
+​
+a] Marker interface
+Any interface which has zero abstract functions is called as marker interface.
+ex:- Serializable
+     Clonable 
+     Remote
+​
+b] Functional interfaces
+Any interface which has only one abstract function is called as functional interface.
+ex:- Runnable
+​
+​
+2] JDK 8 allows static concrete functions inside interface. 
+static concrete functions of the interface can be accesed by using the following syntax.
+syntax:-
+-> interfaceName.staticConcreteFunctionName();
+​
+3] JDK 8 allows default concrete functions inside interface.
+default concrete functions of the interface can be accessed by using the implementation class's object;
+syntax:- 
+-> new ImplClass().defaultConcreteFunctionName();
+​
+4] Function programming 
+JDK 8 allows programmers to use functional interfacess to create lambda functions/expressions.
+​
+Lambda Function/Expression
+It is an anonymous implementation given to the only abstract function present in an functional interface. 
+syntax:- 
+​
+     interfaceName refVar = (args List) -> {Lambda operator}
+     {
+        ........... Business Logic.........
+        return;
+     };
+     

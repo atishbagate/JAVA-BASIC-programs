@@ -1,0 +1,74 @@
+---------------------------------- Encapsulation Notes ----------------------
+
+​
+
+Definition
+
+It is a process in which we hide the data members of a class by minimizing their visibility and providing the access by custom setters and getters.
+
+​
+
+Steps to achieve encapsulation
+
+​
+
+1] make the class data members as private.
+
+2] create custom setters and getters.
+
+​
+
+​
+
+​
+
+Setter functions
+
+These functions are used to initialize and reinilizie the private data members of the class.
+
+syntax :
+
+​
+
+public void customSetterName(datatype formalParameter){
+
+	
+
+	custom code....
+
+	initialization code.....
+
+​
+
+}
+
+​
+
+​
+
+Getter functions
+
+These functions are used to retrive the values from the private data members.
+
+syntax :
+
+​
+
+public datatype* customGetterName(){
+
+	
+
+	Custom code.....
+
+	return (value/ref of private data member);
+
+}
+
+* Of the private data member's value trying to return.
+
+​
+
+​
+
+The classes in which the data members are private and their access is granted throuh getters and setters are callled as -> Encapsulated classes/ POJO classes (Plain Old Java Objects) <-.
+

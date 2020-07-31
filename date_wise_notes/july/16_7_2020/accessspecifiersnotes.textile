@@ -1,0 +1,61 @@
+-------------------------- Access Specifiers Notes --------------------------------------
+
+
+-> Definition <-
+ Access specifiers are the keywords which define the accessability of the entities in java.
+                                            or
+ Access specifiers are used to decide the visiblility of entities in the program .
+
+ There are four types of access specifiers
+
+ Access           ->  keyword
+ specifier                                             
+
+ public                public
+ protected             protected
+ package level         no-keyword
+ private               private
+
+Access specifiers can be used with classes,abstract classes,interfaces,functions,constructores and data members etc...
+
+ 1] Public 
+ public access specifier provides maximum visiblility.
+ Entities which are declared with public access specifier can be accessed from any class present in any package.
+
+ 2] protected
+ protected access specifier provides less visibility compared to public.
+ Entities which are declaredwit protected access secifier can be accessed from any class present in same package but only by using subclass object present in different package.
+
+ 3] package-level
+ package-level access specifier provides less visibility compared to protected.
+ Entities which are declared with any access specifier(pkg-lvl) can be accessed from any class present in same package but not from any class present in other packages.
+
+ 4] private 
+ privte access specifier provides minimum visibility.
+ Entities which are declared with private access specifier can be accessed only with the same class.
+
+
+______________________________________________________________________________________
+   Entity/access-specifier      public        protected      pkg-lvl       private 
+
+   sameclass                    yes           yes            yes           yes  
+   same pkg
+   (Alpha class)
+
+   non-sub class                yes           yes            yes           no 
+   same pkg                                                                           
+   (Bravo class)
+ 
+   sub-class                    yes           yes            yes           no
+   same pkg
+   (Charlie class)
+
+   non-sub class                yes           no             no            no 
+   diff pkg
+   (Delta class)
+
+   sub-class                    yes           yes            no            no
+   diff pkg                               (subclass obj)
+   (Fica class)
+   ____________________________________________________________________________________
+  
