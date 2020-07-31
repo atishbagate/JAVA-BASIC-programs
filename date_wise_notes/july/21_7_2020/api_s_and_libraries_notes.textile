@@ -1,0 +1,39 @@
+-------------------- API's and Libraries Notes ----------------------------
+
+API [Application Programming Interface]
+It is a collection of Library files which are used to communicate with the peices of softwares programmatically within the same or different application.
+
+Libraries
+It is a collection of jar files which comineley form an API.
+
+JAR 
+It is a collection of multiples packages.
+
+Package
+It is a collection of multiple .java and .class files of different classes and interfaces.
+
+Important CoreJava Packages
+
+1] java.lang 
+
+-> Object 
+-> Thread
+-> Exception
+-> Wrapper 
+
+2] java.io
+
+-> FileReader
+-> FileWriter
+-> FileInputStream
+-> ObjectInputStream
+
+3] java.util
+
+-> Scanner
+-> Collection 
+-> ArrayList
+-> HashSet
+-> Map
+-> TreeMap
+
