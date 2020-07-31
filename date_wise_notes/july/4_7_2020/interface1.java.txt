@@ -1,0 +1,28 @@
+interface Isacc{// Super interface
+
+	int i = 100;//It is declared as final and static by the compiler at compile time
+
+	public void f1();//It is declared as final by the compiler at compile time
+}
+class Alpha implements Isacc{// implementation class
+
+	@Override 
+	public void f1(){
+		System.out.println("overriden f1 of alpha");
+	}
+}
+class Driver{
+
+	public static void main(String[] args) {
+		System.out.println("main starts...");
+
+         Alpha a = new Alpha();
+         a.f1();
+         System.out.println("static data member i of Isacc : "+Isacc.i);
+         //Isacc.i = 200; 
+         System.out.println("final data member i of Isacc  : "+Isacc.i);
+
+		System.out.println("main ends..");
+		return;
+	}
+}

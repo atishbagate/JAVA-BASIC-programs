@@ -1,0 +1,70 @@
+package java_class_asssignments;
+
+public class interface_in_heirerical_inheritence {
+
+	public static void main(String[] args) {
+		modelA30 a1=new modelA30();
+		a1.cameraQaulity();
+		a1.batteryBackup();
+		a1.soundLevel();
+		a1.color();
+		modelA40 a2=new modelA40();
+		a2.cameraQaulity();
+		a2.batteryBackup();
+		a2.soundLevel();
+		a2.color();
+
+	}
+
+}
+interface samsungs{
+	String color="black";
+	 public void cameraQaulity();
+	 public void batteryBackup();
+	 public void soundLevel();
+	
+}
+class modelA30 implements samsungs
+{
+	 public void color() {
+		 System.out.println("A30 color is "+samsungs.color);
+	 }
+	 public void cameraQaulity() {
+		 System.out.println("camera qauality of A30 model is 20pixels");
+	 }	
+	 public void batteryBackup()
+	 {
+		 System.out.println("Battery backup of A30 is 2000MAH");
+	 } 
+	 public void soundLevel() {
+		 System.out.println("sound level of A30 is good");
+	 }
+	 
+}
+class modelA40 implements samsungs
+{
+	 public void color() {
+		 System.out.println("A40 color is "+samsungs.color);
+	 }
+	 public void cameraQaulity() {
+		 System.out.println("camera qauality of A40 model is 30pixels");
+	 }	
+	 public void batteryBackup()
+	 {
+		 System.out.println("Battery backup of A40 is 3000MAH");
+	 } 
+	 public void soundLevel() {
+		 System.out.println("sound level of A40 is very good");
+	 }
+	 
+}
+/*..output..
+ camera qauality of A30 model is 20pixels
+Battery backup of A30 is 2000MAH
+sound level of A30 is good
+A30 color is black
+camera qauality of A40 model is 30pixels
+Battery backup of A40 is 3000MAH
+sound level of A40 is very good
+A40 color is black*/
+ 

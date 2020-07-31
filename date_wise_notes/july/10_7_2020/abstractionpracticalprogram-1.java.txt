@@ -1,0 +1,52 @@
+class Dominos{
+
+	public void showMenu(){
+		System.out.println("Ragi muddhe");
+		System.out.println("Koli saaru");
+	}
+	public void generatemenu(){
+		System.out.println("Logic to generate menu");
+	}
+}
+class Empire{
+
+	public void showMenu(){
+		System.out.println("Ghee rice");
+		System.out.println("Coin parota");
+	}
+	public void deliveryProtocols(){
+       System.out.println("delivery protocols set by empire");
+	}
+}
+class ServiceProvider{
+
+	public static Dominos select(String choice){
+        
+          Dominos dm = null;
+          Empire em  = null;
+        if (choice.equalsIgnoreCase("dominos")) {
+        dm = new Dominos();
+        }
+        else if(choice.equalsIgnoreCase("empire")){
+        	em = new Empire();
+        }
+ return dm;
+	}
+}
+class Customer{
+
+	public static void main(String[] args) {
+		System.out.println("main starts...");
+
+		Dominos dm = ServiceProvider.select("Dominos");
+		dm.showMenu();
+		dm.generatemenu();
+
+		//Empire em = ServiceProvider.select("Empire");	
+        //em.showMenu(); 
+
+		System.out.println("main ends...");
+		return;
+	}
+}
+

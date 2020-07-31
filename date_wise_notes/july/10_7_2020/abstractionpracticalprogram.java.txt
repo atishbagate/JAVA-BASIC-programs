@@ -1,0 +1,62 @@
+/*------------------------------------------------ Implementation Layer/Application Layer --------------------------------------*/
+interface Resturent{
+
+	public void showMenu();
+}
+class Dominos implements Resturent{
+
+    @Override
+	public void showMenu(){
+		System.out.println("Ragi muddhe");
+		System.out.println("Koli saaru");
+	}
+	public void generatemenu(){
+		System.out.println("Logic to generate menu");
+	}
+}
+class Empire implements Resturent{
+
+    @Override
+	public void showMenu(){
+		System.out.println("Ghee rice");
+		System.out.println("Coin parota");
+	}
+	public void deliveryProtocols(){
+       System.out.println("delivery protocols set by empire");
+	}
+}
+/*-------------------------------------------- Service Layer/Healper Layer -----------------------------------------------------*/
+class ServiceProvider{
+
+	public static Resturent select(String choice){
+        
+        Resturent resturent = null;
+
+        if (choice.equalsIgnoreCase("dominos")) {
+        resturent = new Dominos();
+        }
+        else if(choice.equalsIgnoreCase("empire")){
+        resturent = new Empire();
+        }
+ return resturent;
+	}
+}
+/*-------------------------------------------------------------- User Layer/Client Layer -----------------------------------------*/
+class Customer{
+
+	public static void main(String[] args) {
+		System.out.println("main starts...");
+
+		Resturent resturent = ServiceProvider.select("empire");
+		resturent.showMenu();
+		// resturent.deliveryProtocols(); cannot be accessed because it's hidden
+
+		Resturent resturent = ServiceProvider.select("Dominos");
+		resturent.showMenu();
+		// resturent.generateMenu(); cannot be accessed because it's hidden
+
+		System.out.println("main ends...");
+		return;
+	}
+}
+

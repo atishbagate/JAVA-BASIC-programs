@@ -1,0 +1,28 @@
+abstract class Eco{
+	
+	   abstract public void eon();
+
+	   public void epson(){
+          System.out.println("epson od class Eco");
+	   }
+}
+class Decon extends Eco{
+     
+     @Override
+     public void eon(){
+     	System.out.println("overriden implementation of eon");
+     }
+}
+class Driver{
+
+	public static void main(String[] args) {
+		System.out.println("main starts...");
+
+             Decon d = new Decon();
+             d.epson();
+             d.eon();
+
+		System.out.println("main ends...");
+		return;
+	}
+}

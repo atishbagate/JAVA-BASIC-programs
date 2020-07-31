@@ -1,0 +1,51 @@
+interface Red{
+
+	double d1  = 100;
+	int    var = 10; 
+	public void eco();
+	public void alpha();
+}
+
+interface Black{
+
+	double d2  = 200;
+	int    var = 20;
+	public void eon();
+	public void alpha();
+
+}
+class Impl extends Object implements Red,Black {
+
+    @Override
+	public void eco(){
+		System.out.println("Overriden eco of interface Red");
+	}
+	@Override
+	public void eon(){
+		System.out.println("Overriden eon of interface Black");
+	}
+	@Override
+	public void alpha(){
+		System.out.println("Overriden alpha()");
+	}
+	
+}
+class Driver{
+
+	public static void main(String[] args) {
+		System.out.println("main starts...");
+
+         Impl i = new Impl();
+         System.out.println(Red.d1);
+         i.eco();
+         System.out.println(Black.d2);
+         i.eon();
+         System.out.println("accessing object class func using Impl obj"+i.hashCode());
+         System.out.println("var of Red   "+Red.var);
+         System.out.println("var of Black "+Black.var);
+         i.alpha();
+
+		System.out.println("main ends...");
+		return;
+	}
+}

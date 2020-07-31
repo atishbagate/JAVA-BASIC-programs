@@ -1,0 +1,55 @@
+interface AndroidOS{
+
+	public void homescrean();
+	public void notificationBar();
+}
+interface OxygenOS{
+
+	public void homescrean();
+	public void theme();
+}
+class OnePlus8 implements AndroidOS,OxygenOS{
+
+    
+    @Override
+    public void homescrean(){
+    	System.out.println("10 icons on homescrean");
+    }
+    @Override
+    public void notificationBar(){
+    	System.out.println("Swipe down to open notifications");
+    }
+    @Override
+    public void theme(){
+    	System.out.println("Based on the background screan");
+    }
+}
+class Pixel4a implements AndroidOS{
+
+    @Override
+    public void homescrean(){
+    	System.out.println("5 icons on homescrean");
+    }
+    @Override
+    public void notificationBar(){
+    	System.out.println("Long Swipe down to open notifications");
+    }
+
+}
+class Driver {
+
+	public static void main(String[] args) {
+		System.out.println("main starts..");
+		OnePlus8 op8 = new OnePlus8();
+		op8.homescrean();
+		op8.notificationBar();
+		op8.theme();
+
+		Pixel4a p4a = new Pixel4a();
+		p4a.homescrean();
+		p4a.notificationBar();
+
+		System.out.println("main ends...");
+		return;
+	}
+}

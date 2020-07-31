@@ -1,0 +1,76 @@
+interface Disk{
+
+​
+
+	public void run();
+
+}
+
+class CompactDisk implements Disk{// step 1 -> inheritance
+
+​
+
+@Override// step 2 -> overriding
+
+	public void run(){
+
+		System.out.println("reading the CompactDisk from 1byte to 400 megaBytes");
+
+	}
+
+}
+
+class DigitalVersatileDisk implements Disk{// step 1 -> inheritance
+
+​
+
+@Override// step 2 -> overriding
+
+public void run(){
+
+	System.out.println("reading the DigitalVersatileDisk from 1byte to 4.7 gigaBytes");
+
+}
+
+}
+
+class DiskPlayer{
+
+​
+
+	public static void read(Disk disk){// step 3b -> upcating
+
+​
+
+disk.run(); 
+
+	}
+
+}
+
+class Driver{
+
+​
+
+	public static void main(String[] args) {
+
+		System.out.println("main starts...");
+
+​
+
+CompactDisk cd = new CompactDisk(); 
+
+DigitalVersatileDisk dvd = new DigitalVersatileDisk();
+
+DiskPlayer.read(dvd);// step 3a -> upcating
+
+​
+
+		System.out.println("main ends...");
+
+		return;
+
+	}
+
+}
+

@@ -1,0 +1,71 @@
+interface University{
+
+   String uName = "VTU";
+	
+	public boolean registerBranch(String bName);
+}
+interface Collage extends University{
+
+	String cName = "BIT";
+
+	  public boolean fresherDay(boolean approval);
+}
+class Branch implements Collage{
+
+	String bName;
+
+	@Override
+	public boolean registerBranch(String bName){
+
+        this.bName = bName;
+
+		if (bName.equalsIgnoreCase("Mechanical")||bName.equalsIgnoreCase("Civil")) {
+		 	return true;
+		 } 
+		 else{
+            return false;
+		 }
+	}
+
+	@Override
+	public boolean fresherDay(boolean approval){
+        
+        if(approval)
+        	return true;
+        else
+        	return false;
+	}
+
+}
+class Driver{
+
+	public static void main(String[] args) {
+		System.out.println("main starts...");
+    // Possible ways to access the University's name
+         System.out.println("University : "+University.uName); 
+         System.out.println("University : "+Collage.uName); 
+         System.out.println("University : "+Branch.uName); 
+    // Possible ways to access the Collage's Name
+         System.out.println("Collage : "+Collage.cName);
+         System.out.println("Collage : "+Branch.cName);  
+
+         Branch mech = new Branch();
+    // Implementation Universit's abstract registerBranch(String bName)
+         boolean res = mech.registerBranch("Mechanical");  
+         if (res) 
+           System.out.println("Branch successfully registered");	
+         else
+           System.out.println("Branch is not registered");    
+    //  Implementation Collage's abstract registerBranch(boolean approval) 
+         boolean approval = mech.fresherDay(true);
+         if(approval)
+         	System.out.println("fresherDay day is approved");
+         else
+         	System.out.println("fresherDay day not approved");
+        
+
+
+		System.out.println("main ends...");
+		return;
+	}
+}

@@ -1,0 +1,36 @@
+final class Alpha{
+
+
+    final int i = 100;
+
+	final public void f1(){
+		System.out.println("f1 of class Alpha");
+	    System.out.println("i  of class Alpha : "+i);
+	}
+
+}
+
+
+//class Bravo extends Alpha{ -> final classes cannot be inherited <-
+    
+    /* 
+     @Override
+     public void f1(){ -> superclass functions which are declared as final cannot be overriden <-
+     	 System.out.println("f1 of Bravo");
+         //i = 200; -> we cannot re-initialize a final data member/varible <-
+         System.out.println("i in Bravo : "+i);
+     }
+     */
+//}
+
+class Driver{
+
+	public static void main(String[] args) {
+		System.out.println("main starts..");
+
+           Bravo b = new Bravo();
+           b.f1();
+
+		System.out.println("main ends...");
+	}
+}

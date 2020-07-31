@@ -1,0 +1,62 @@
+abstract class Area
+{
+   abstract public void apartments();
+   abstract public void parks();
+   abstract public void temples();
+
+}
+ abstract class infrastructure extends Area
+{
+	abstract public void churches();
+	abstract public void school();
+}
+class construction extends infrastructure
+{
+	@Override
+	public void apartments()
+	{
+		System.out.println("APARTMENTS CONSTRUCTED");
+	}
+	@Override
+	public void parks()
+	{
+		System.out.println("PARKS CONSTRUCTED");
+	}
+	@Override
+	public void temples()
+	{
+		System.out.println("TEMPLES CONSTRUCTED");
+	}
+	@Override
+	public void churches()
+	{
+		System.out.println("CHURCHES CONSTRUCTED");
+	}
+	@Override
+	public void school()
+	{
+		System.out.println("SCHOOL CONSTRUCTED");
+	}
+}
+class driver
+{
+	public static void main(String[] args) 
+	{
+		construction c = new construction();
+		c.apartments();
+		c.parks();
+		c.temples();
+		c.churches();
+		c.school();
+	}
+}
+
+
+/*
+output:
+APARTMENTS CONSTRUCTED
+PARKS CONSTRUCTED
+TEMPLES CONSTRUCTED
+CHURCHES CONSTRUCTED
+SCHOOL CONSTRUCTED
+*/

@@ -1,0 +1,25 @@
+------------------------ Abstract Classes -------------------------------
+
+Abstract functions/methods
+
+Defination
+Any function which has a declration but no defination is called as abstract function.
+
+-> Abstract functions should be declared with abstract keyword.
+-> Any function which has both declration and definition are called as concrete functions.
+------------------------------------------------------------------------
+
+Abstract Classes
+
+Defination
+Any class which is declared with the keyword abstract is known as abstract class.
+
+-> If a class contains atleast one abstract function then the class should be declared with abstract keyword.
+-> If a class contains zero abstract function then such classes are called as concrete classes.
+-> An abstract class can contain both concrete and abstract functions.
+-> An abstract class can contain zero abstract functions.
+-> Object cannot be created for abstract classes nut reference variable can be created for abstract classes.
+
+-> When a class extends an abstract class it has 2 option
+1] declare itself as abstract 
+2] provide the implementations/bodies for the superclass abstract methods by overriding them.

@@ -1,0 +1,44 @@
+------------------------------- Abstraction Notes --------------------------------------
+
+Defination 
+It is a process of hiding the implementations of the classes by just showing the declrations or just by providing the services.
+
+Steps to achieve abstraction
+1 ] Heiraical inheritance
+2 ] Run time polymorphism
+
+We can use 2 entities to achieve best abstraction
+1 ] relation from abstract class to concrete classes
+2 ] relation from interface      to concrete classes
+
+Abstract classes help you to achieve nearly 99% abstraction
+
+Interfaces help you to achieve nearly 100% abstraction
+
+----------------------------------------------------------------------------------------
+                Abstraction can be achieved by making use of these 3 layers
+
+1 ] Implementation Layer/Application Layer
+This layer contains all business logics or implementation of all classes.
+
+2 ] Service Layer/Helper Layer
+This layer contains a service/helper class to achieve abstraction
+
+3 ] User Layer/Client Layer
+This layer will contain all the logics for the application user to utilize the services.
+
+----------------------------------------------------------------------------------------
+
+Tight Coupling 
+It is a process of creating the object of one class in another class which creates a dependency.
+
+Loose Coupling
+It is a process in which one class object is not created in another class which doesn't create dependency.
+
+--------------------------------------------------------------------------------------------
+Application of Abstraction
+
+1] Hidinding implementation details of a class.
+2] Loose coupling
+  [Loose coupling is achieved between the implementation layer and user layer]
+  Refer file AbstractionPracticalProgram.java

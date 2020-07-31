@@ -1,0 +1,62 @@
+abstract class BookTemplete{
+	
+	abstract public void createConcept();
+
+	abstract public void implementConcept();
+	
+	abstract public void publishBook();
+}
+class GOTbook1 extends BookTemplete{
+     
+    @Override 
+    public void createConcept(){
+		System.out.println("GoT book1 concept created in 30 sitting");
+	}
+
+	@Override
+	public void implementConcept(){
+		System.out.println("Writing 12 chapters");
+	}
+       
+    @Override
+    public void publishBook(){
+		System.out.println("PNB publishers");
+	}    
+}
+class GOTbook2 extends BookTemplete{
+    
+    @Override
+    public void createConcept(){
+		System.out.println("GoT book2 concept created in 10 sitting");
+	}
+
+	@Override
+	public void implementConcept(){
+		System.out.println("Writing 18 chapters");
+	}
+
+	@Override
+	public void publishBook(){
+		System.out.println("PNB publishers");
+	} 
+
+}
+class Driver{
+
+	public static void main(String[] args) {
+		System.out.println("main starts...");
+
+               GOTbook1 g1 = new GOTbook1();
+               g1.createConcept();
+               g1.implementConcept();
+               g1.publishBook();
+
+               GOTbook1 g2 = new GOTbook1();
+               g2.createConcept();
+               g2.implementConcept();
+               g2.publishBook();
+
+		System.out.println("main ends...");
+		return;
+	}
+}

@@ -1,0 +1,62 @@
+abstract class PermanentBuildingPlan{
+
+			abstract public void foundation();
+			abstract public void Structure();
+			abstract public void selectionItems(); 
+
+}
+ abstract class BusinessBuildingPlan extends PermanentBuildingPlan{
+
+		abstract public void plans();
+
+		 public void Makingwalls(){
+			System.out.println("Makingwalls of 3 floors");
+		}
+
+		@Override
+		public void foundation(){
+			System.out.println("Minimum 2 layers of foundation construction");
+		}
+}
+ class TemporaryBuildingPlan extends BusinessBuildingPlan{
+
+	@Override	
+	public void Structure(){
+		System.out.println("construct Swimmingpool and balcony as etc");
+	}
+
+	@Override
+	public void selectionItems(){
+		System.out.println("Make it home as Etc safety");
+	}
+
+	@Override
+	public void plans(){
+		System.out.println("Plans to construct building in a splitted way");
+	} 
+}
+
+class User{
+	public static void main(String[] args) {
+		System.out.println("main starts.........");
+
+			TemporaryBuildingPlan t1 = new TemporaryBuildingPlan();
+			t1.Makingwalls();
+			t1.selectionItems();
+			t1.foundation();
+			t1.plans();
+			t1.Structure();
+
+		System.out.println("main ends...........");
+		return;
+	}
+}
+
+/* main starts.........
+Makingwalls of 3 floors
+Make it home as Etc safety
+Minimum 2 layers of foundation construction
+Plans to construct building in a splitted way
+construct Swimmingpool and balcony as etc
+main ends...........
+*/

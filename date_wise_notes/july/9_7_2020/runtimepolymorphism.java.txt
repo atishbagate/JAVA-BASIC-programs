@@ -1,0 +1,54 @@
+class Eco{
+
+public void alpha(){
+
+	System.out.println("alpha() of Eco exe");
+
+}	
+
+}
+
+class Eon extends Eco{// step 1 -> inheritance
+
+​
+
+@Override// steop 2 -> overriding
+
+public void alpha(){
+
+	System.out.println("alpha() Eon exe");
+
+}
+
+}
+
+class Driver{
+
+​
+
+	public static void main(String[] args) {
+
+		System.out.println("main starts...");
+
+​
+
+Eon eonRef = new Eon();
+
+Eco ecoRef = null;
+
+ecoRef = eonRef;// step 3 -> upcating
+
+ecoRef.alpha();//It should call Eco's alpha() implementation insted JVM gives Eon's alpha() implementation
+
+​
+
+​
+
+		System.out.println("main ends...");
+
+		return;
+
+	}
+
+}
+

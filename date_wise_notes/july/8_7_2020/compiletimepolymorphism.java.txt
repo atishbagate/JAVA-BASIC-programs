@@ -1,0 +1,25 @@
+import java.util.Scanner;
+class A {
+	
+	public void f1(int a){
+         System.out.println("a : "+a);
+	}
+	public void f1(double a){
+		System.out.println("a : "+a);
+	}
+}
+class Driver {
+​
+	public static void main(String[] args) {
+		System.out.println("main starts...");
+​
+        Scanner sc = new Scanner(System.in);
+​
+		A a = new A();
+		a.f1(100);//1st overloaded func
+		a.f1(100.10);//2nd overloaded func
+        a.f1(sc.nextInt());// static binding but dynamic input
+​
+		System.out.println("main ends...");
+	}
+}

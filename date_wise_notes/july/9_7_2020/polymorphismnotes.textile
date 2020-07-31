@@ -1,0 +1,57 @@
+----------------------- Polymorphism Notes --------------------------------------
+​
+Defination
+​
+It is a process in which one entity showing different/multiple behaviours at different instance/time is called as polymorphism.
+​
+There are 2 types of polymorphisms which are based on the time of occurence.
+the occurences are 
+a] compile time
+b] run     time
+------------------------------------------------------------------------------------
+1] Compile time polymorphism
+​
+Defination
+It is process of binding the method declration to the method defination by the compiler at compile time based on the arguments passed is called compile time polymorphism.
+​
+Method overloading and constructor overloading are the best examples for compile time polymorphism.
+​
+Compile time polymorphism is also called as early binding because binding before runtime.
+​
+Compile time polymorphism is also called as static binding because the binding is done at the compile which cannot be changed at the runtime.
+​
+-----------------------------------------------------------------------------------
+2]  Run time polymorphism
+​
+Defination
+It is a process of binding the method declration to method defination bt JVM at runtime based on the object is called as runtime polymorphism.
+​
+Method overriding is the best example forruntime polymorphism.
+​
+Steps to be followed to achieve run time polymorphism.
+1] Inheritance
+2] Method overriding
+3] Upcating
+​
+Using the upcasted reference if we access the super class overriden function we get subclass overriden function's implementation insted of superclass function's implementation.
+​
+Run time polymorphism is also called as dynamic binding because the binding done by rhe compiler at compile time is changed by JVM at runtime.
+​
+Run time polymorphism is also called as late binding because the binding is done after compile time.
+------------------------------------------------------------------------------------
+​
+​
+​
+​
+​
+​
+​
+​
+​
+​
+​
+​
+​
+​
+​
+​

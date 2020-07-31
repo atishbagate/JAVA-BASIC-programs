@@ -1,0 +1,43 @@
+-------------------------------------- Interface Notes --------------------------------
+
+Defination
+  An interface is a special kind class in which the function are by default abstract and the data members are by default static and final.
+
+Interface can be created with the help of a keyword called -> interface <-.  
+
+syntax :-
+interface interfaceName{
+	//codes
+}
+
+-> A class can only extend another class or abstract class but can never extend an interface.
+
+-> We need to use imlements keyword for a class to inherit the properties from the interface.
+
+-> The class which is implementing an interface is called as an implementation class.
+-> An interface which is beeing implemented by a class is called as Super interface.
+-> Objects cannot be created for interfaces but reference variable can be created.
+-> An interface cam extend another interface.
+-> An interface cannot implement or exted a class.
+---------------------------------------------------------------------------------------
+Entity relation diagram
+
+-----------------------------------------------------------------
+       Entity/Relation  |      extends         |     implements
+-----------------------------------------------------------------
+       class            |     class            |     interface
+                        |     abstract class   |
+-----------------------------------------------------------------
+      abstract class    |     abstract class   |     interface 
+                        |     class            |
+-----------------------------------------------------------------
+       interface        |     interface        | 
+-----------------------------------------------------------------  
+---------------------------------------------------------------------------------------
+
+Interfaces can be used to achieve
+1] single     inheritance
+2] multilevel inheritance     
+3] hieiarical inheritance
+4] hybrid     inheritance
+5] multiple   inheritance

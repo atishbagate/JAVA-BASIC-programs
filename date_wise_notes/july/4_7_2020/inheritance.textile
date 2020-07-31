@@ -1,0 +1,92 @@
+------------------------------ Inheritance Notes -------------------------
+
+Pre requirments
+1] class
+2] variables
+3] functions
+4] constructors
+5] objects
+
+Inheritance is a kind of relation between classes.
+Inheritance is also called as Is-A relation.
+
+Defination
+Inheritance is a process of aquaring/passing/sending properties from one class to another class. 
+
+example 
+                     Inheriting 
+Father   <--------------------------------  Daughter                                
+property  -> Red hair                       property  -> Red hair
+behaviour -> Walking Style                  behaviour -> Walking Style
+
+class Father{
+	
+	String hairColor = "Red";
+    
+    public void walkingStyle(){
+      
+       System.out.println("Walks cross");
+    }
+}
+
+class Daughter extends Father{
+	
+	String eyeColor = "blue";
+
+	public void studyPattern(){
+         
+         System.out.println("Studies fast");
+    }
+
+}
+
+-> Inheritance is achieved with the help of keyword called  -->extends<---.
+
+-> The class from which the properties are inherited from are called as Parent/Super/Base class.
+
+-> The class to which the properties are inherited to is called as child/Sub/Derives class.
+
+
+-> Properties cannot be inherited from sub class to super class.
+
+-> Using Superclass object we can only access superclass properties.
+
+-> Using the subclass object we can access both superclass and subclass properties.
+
+-> Constructors from super class cannot be inherited to sub class.
+
+-> class declared with final keyword cannot be exteneded.
+
+-> class data-members declared with final keyword can be inherited but cannot be re-initialized. 
+
+-> class function-members declared with final keyword can be inherited but cannot be re-initialized.
+
+-> class members which are declared with private keyword cannot be inherited.
+
+
+---------------------------------------------------------------------------------------
+                              Types of Inheritance
+
+1] Single/simple inheritance
+2] Multilevel inheritance
+3] Hirartical inheritance
+4] Multiple inheritance
+5] Hibrid inheritance  
+
+
+-----------------------------------------------------------------------------------
+
+1] Single/simple inheritance
+One subclass inheriting the properties from one superclass is known as single/simple inheritance.   
+
+------------------------------------------------------------------------------------
+
+2] Multilevel inheritance
+One subclass inherits properties from one superclass where that superclass inherits properties from another superclass. 
+
+------------------------------------------------------------------------------------
+                       
+
+Note:
+
+final keyword is not same as static

@@ -1,0 +1,37 @@
+class Bravo{
+
+}
+// interface Delta extends Bravo { -> interface cannot extent a class
+//interface Delta implements Bravo{ ->interface cannot implement a class 
+interface Delta{// Super interface    
+    int c = 11;
+
+	public void eco();
+}
+interface Charlie extends Delta{// sub interface
+
+	
+
+}
+class Alpha implements Charlie{
+
+	@Override
+	public void eco(){
+		System.out.println("Overriden eco in Alpha");
+	}
+}
+class Driver {
+
+	public static void main(String[] args) {
+		System.out.println("main starts...");
+        
+        //new Charlie(); object cannot be created
+        Charlie cRef;// refence valiable can be created
+
+        System.out.println("Accessing c of Delta with Charlie class Add : "+Charlie.c);       
+        new Alpha().eco();
+
+		System.out.println("main ends..");
+		return;
+	}
+}
