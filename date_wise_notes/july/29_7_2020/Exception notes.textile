@@ -1,0 +1,83 @@
+---------------------------------------- Exception Notes -------------------------------------------------
+
+
+                                           Exception 
+
+Definition:-
+
+It is an unexpected event which occures at the runtime due to an unexpected operation performed by a single of code which leads to stop the execution of the program abruptly.
+
+
+                                            Error
+
+Defination:-
+An error is an unexpected events which occurs at the runtime due to the malware caused by the software or hardware of the device which leads to stop the execution of the program abruptly.
+
+Errprs cannot be resolved by the programmmer/devloper.
+
+----------------------------------------------------------------------------------------------------
+                                     Exception hierirachey
+
+-> Exception is a class in java which belong to java.io package.
+-> Error class and Exception class extends Throwable which ectends Object class.
+-> RuntimeException class and IOException Class extend Exception class.
+
+----------------------------------------------------------------------------------------------------
+                   What JVM does When an exception occurs.
+
+1] When an line results in an unexpected operation JVM creates the corresponding exception class object and throws it within the called function.
+
+2] If no code is written to take care of the exception in the called function then JVM will remove the frame from exe and throws the exception object to the calling function.
+
+3] If no code is written to take care of the exception in the calling function then JVM will remove the frame from exe and calls a software called Default Exception Handler(D.E.H).
+
+4] D.E.H will no take care of the exception but it prints 2 importent messages regaring the exception which helps the programmer.
+
+a] Fully qualified exception class name.
+b] Reason for the cause of exception
+3] stackTrace
+-----------------------------------------------------------------------------------------------------
+                            Exception Handling
+
+It is a process in which the programmer handles the exception by write a try and catch block.
+
+syntax:-
+
+try{
+	
+	risky lines of code causing the exception;
+}catch(specific exceptionClass RefVar){
+	
+	alternative lines of code
+}
+
+Exceptions can be handled in 2 locations.
+1] In the called function
+If the exception is handled inside called function then the called function finishes it's execution.
+
+2] In the calling function
+If the exception is handled inside calling function then the called function cannot finish it's execution.
+-----------------------------------------------------------------------------------------------------
+                                   Multiple exception handling
+
+In java multiple line can cause an exception which can be handled by using try and multiple catch blocks.
+
+syntax:-
+     
+try{
+     	risky lines of code causing the exception;
+}catch(specific exceptionClass RefVar1){
+	
+	alternative lines of code
+}      
+catch(specific exceptionClass RefVar2){
+	
+	alternative lines of code
+}               
+Exceptions can be handled in 2 locations.
+1] In the called function
+If the exception is handled inside called function then the called function finishes it's execution.
+
+2] In the calling function
+If the exception is handled inside calling function then the called function cannot finish it's execution.                    
+-----------------------------------------------------------------------------------------------------

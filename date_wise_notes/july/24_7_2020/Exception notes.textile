@@ -1,0 +1,38 @@
+---------------------------------------- Exception Notes -------------------------------------------------
+
+
+                                           Exception 
+
+Definition:-
+
+It is an unexpected event which occures at the runtime due to an unexpected operation performed by a single of code which leads to stop the execution of the program abruptly.
+
+
+                                            Error
+
+Defination:-
+An error is an unexpected events which occurs at the runtime due to the malware caused by the software or hardware of the device which leads to stop the execution of the program abruptly.
+
+Errprs cannot be resolved by the programmmer/devloper.
+
+------------------------------------------------------------------------------------------------------------
+                                     Exception hierirachey
+
+-> Exception is a class in java which belong to java.io package.
+-> Error class and Exception class extends Throwable which ectends Object class.
+-> RuntimeException class and IOException Class extend Exception class.
+
+------------------------------------------------------------------------------------------------------------
+                   What JVM does When an exception occurs.
+
+1] When an line results in an unexpected operation JVM creates the corresponding exception class object and throws it within the called function.
+
+2] If no code is written to take care of the exception in the called function then JVM will remove the frame from exe and throws the exception object to the calling function.
+
+3] If no code is written to take care of the exception in the calling function then JVM will remove the frame from exe and calls a software called Default Exception Handler(D.E.H).
+
+4] D.E.H will no take care of the exception but it prints 2 importent messages regaring the exception which helps the programmer.
+
+a] Fully qualified exception class name.
+b] Reason for the cause of exception
+3] stackTrace
