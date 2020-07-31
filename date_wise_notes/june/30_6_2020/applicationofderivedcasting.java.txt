@@ -1,0 +1,55 @@
+class FrontCamera extends Object{
+
+	public void captureFacialFeatures(){
+		System.out.println("Unlocking the device by scanning the face");
+		return;
+	}
+}
+class FingerPrintScanner extends Object{
+
+	public void captureFingerGrooves(){
+		System.out.println("Unlocking the device by scanning the finger prints");
+		return;
+	}
+}
+class Device{
+
+	public static void scan(Object obj){
+
+      System.out.println("obj : "+obj);
+      /* instenceOf operator 
+        It is used to verify wether the given address/reference 
+        belongs to a perticular class or not 
+      */
+      if (obj instanceof FrontCamera) {
+
+      	FrontCamera fc = (FrontCamera)obj;
+      	fc.captureFacialFeatures();
+
+      }else if(obj instanceof FingerPrintScanner){
+
+      FingerPrintScanner fp = (FingerPrintScanner)obj;
+      fp.captureFingerGrooves();
+
+      }  
+	}
+}
+class User{
+
+	public static void main(String[] args) {
+		System.out.println("main starts...");
+        
+        FrontCamera fc = new FrontCamera();
+        System.out.println("fc  : "+fc);
+
+        FingerPrintScanner fp = new FingerPrintScanner();
+        System.out.println("fp  : "+fp);
+
+        Device.scan(fp);
+
+		System.out.println("main ends...");
+		return;
+	}
+}
+
+

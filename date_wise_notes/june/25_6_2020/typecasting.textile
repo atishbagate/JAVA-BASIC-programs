@@ -1,0 +1,49 @@
+--------------- TypeCasting Notes -------------------------
+
+Defination
+It is process of converting one kind of kind/type/form data into another kind/type/form of data.
+
+There are 2 types of data
+1] Primitive 
+2] Non-primitive
+----------------------------------------------------
+primitive     -> non-primitive => not possible
+non-primitive -> primitive     => not possible
+----------------------------------------------------
+primitive     -> primitive     => possible
+non-primitive -> non-primitive => possible
+----------------------------------------------------
+TypeCasting is divided into 2 types
+
+a] Primitive casting
+b] Derived casting
+-----------------------
+a] Primitive Casting
+It is a process of converting one primitive kind of data into another primitive kind of data.
+            There 8 primitive datatypes
+
+Datatype        Capacity
+
+byte            1 byte
+boolean         1 byte
+short           2 bytes
+char            2 bytes
+int             4 bytes
+float           4 bytes
+long            8 bytes
+double          8 bytes 
+
+Primitive casting is divided into 2 types
+1] Widening
+2] Narrowing
+
+1] Widening
+It is a process of converting lower type data into higher type of data.
+
+2] Narrowing
+It is a process of converting Higher type data into lower type of data. 
+
+-------------------------------------------------------------------
+typecasting is required for memory management.
+typecasting is required to prevent data loss.
+

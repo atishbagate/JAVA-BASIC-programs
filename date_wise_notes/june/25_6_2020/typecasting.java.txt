@@ -1,0 +1,17 @@
+class A{
+	public static void main(String[] args) {
+		System.out.println("main starts...");
+
+        int i = 100;  
+        A aref = new A();
+        
+        aref = i;
+        System.out.println(aref);
+
+        i = aref;
+        System.out.println(i);
+
+		System.out.println("main ends..");
+		return;
+	}
+}

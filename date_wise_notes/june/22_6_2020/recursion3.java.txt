@@ -1,0 +1,28 @@
+class Argon{/*Controlled direct recursion*/
+
+    public static void main(String[] args) {
+    	System.out.println("main starts...");
+
+        Xenon.radon(1);
+
+    	System.out.println("main ends..");
+    	return;
+    }
+
+}
+class Xenon{
+
+	public static void radon(int iterationTracker){
+		System.out.println("radon starts...");
+        
+        if (iterationTracker<=3) {
+            System.out.println(iterationTracker);
+            iterationTracker+=1;
+            radon(iterationTracker); 
+
+        }else{
+          System.out.println("radon ends...");
+          return;
+        }
+	}
+}

@@ -1,0 +1,36 @@
+class Argon{/*controled indirect recursion*/
+
+	public static void main(String[] args) {
+		System.out.println("main starts...");
+
+		new Xenon().eon(1);
+
+		System.out.println("main ends...");
+		return;
+	}
+}
+class Xenon{
+
+	public void eon(int iT1){
+		System.out.println("eon starts...");
+        
+        if (iT1<=3) {
+        	System.out.println("iT1 : "+iT1);
+            iT1+=1;
+          	ion(iT1);
+        }else{
+        	System.out.println("eon ends...");
+		return;
+        }  	
+	} 
+	public void ion(int iT1){
+		System.out.println("ion starts....");
+        
+        if (iT1<=3) {
+        	eon(iT1);
+        }else{
+             System.out.println("ion ends...");
+		return;
+        }
+	}
+}

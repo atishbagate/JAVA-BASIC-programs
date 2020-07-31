@@ -1,0 +1,8 @@
+---------------------------- Diamond Problem --------------------------------
+Why multiple inheritance is not supported in java using classes?
+
+1] It creates a confusion or ambiguity for compiler to copy the object class properties to the subclass because of multiple paths available.
+
+2] It creates a confusion or ambiguity to which superclass constuctor to be called from subclass constructor using super statement since there multiple superclasses present.
+
+3] It creates a confusion for jvm to access superclass properties from subclass when multiple superclasses have same property names.

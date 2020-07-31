@@ -1,0 +1,27 @@
+---------------------------- TypeCasting Notes ----------------------------
+
+Derived Casting
+
+It is process of converting one class type of data into another class type of data .
+Derived casting can be achived only when two or more classes are in relation(Is-A/Inheritance).
+
+----------------------------------------------------------------------------
+
+1] Upcasting
+It is a process in which the subclass object's address is stored in superclass reference variable.
+
+---->The superclass reference variable which is pointing towards the  sunclass's object is called as -> Upcasted Reference <-.
+-> Using the upcasted reference we can only acess the superclass properties.
+-> Inheritance is mandatory for upcasting.
+
+----------------------------------------------------------------------------
+
+2] DownCasting
+It is a process of converting the upCasted reference back to subclass reference.
+
+----> The subclass reference variable which is pointing towards the subclass object is called as ->downcasted reference<-.
+-> Downcasting has to be done forcebly by using the casting statement.
+-> Using the downcasted reference we can access both superclass properties as well as subclass properties.
+-> Inheritance and upcasting are mandatory for downcasting.
+
+----------------------------------------------------------------------------

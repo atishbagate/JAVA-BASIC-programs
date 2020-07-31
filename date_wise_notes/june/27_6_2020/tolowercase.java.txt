@@ -1,0 +1,32 @@
+/*Write a program to convert uppercase String into lowercase String*/
+class A{
+
+	public static void main(String[] args) {
+		System.out.println("main starts..");
+        
+       toLowerCase("This class IS Running!");
+
+		System.out.println("main ends...");
+		return;
+	}
+
+	public static void toLowerCase(String s){
+       System.out.println("toLowerCase starts...");	
+
+       String lowerCaseString = "";
+
+       for(int i = 0;i<s.length();i+=1){
+       char c1 = s.charAt(i);/*retriveing a perticular char from String*/ 
+       if(c1>='A'&&c1<='Z'){ 
+             lowerCaseString += (char)(c1+32);
+           }
+           else{
+           	 lowerCaseString += c1;
+           }
+       }
+       System.out.println("The original String : ["+s+"]");
+       System.out.println("uppercase String    : ["+lowerCaseString+"]");
+       System.out.println("toLowerCase ends...");
+       return;
+	}
+}

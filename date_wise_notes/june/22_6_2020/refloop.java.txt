@@ -1,0 +1,21 @@
+class Alpha{
+
+	public static void main(String[] args) {
+		System.out.println("main starts...");
+
+       
+        for (int iterationTracker = 1; ; ) {
+        	if (iterationTracker<=3) {
+        		System.out.println(iterationTracker);
+        	    System.out.println("for loop");
+        	    iterationTracker+=1;
+        	}else{
+        		break;
+        	}
+        	
+        }
+
+		System.out.println("main ends...");
+		return;
+	}
+}

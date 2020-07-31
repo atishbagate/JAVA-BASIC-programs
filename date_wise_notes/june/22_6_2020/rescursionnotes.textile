@@ -1,0 +1,30 @@
+----------------------- Recursion Notes -------------------------------------
+
+
+Recursion Defination:-
+It is a process in which the fuction executes multiple times in a loop.
+
+Recursion may lead to stackOverFlowError if it is not controled.
+
+                              Recursion
+                                  |
+          --------------------------------------------                 
+          |                                          |
+      Direct Recursion                       Indirect Recursion   
+
+Direct Recursion 
+It is a process in which the function calls itself direct again and again.              
+-> refer program Recursion1.java
+
+Indirect Recurstion
+It is a process in which one function calls another function which calls another function util it calls the first function.
+-> refer program Recursion2.java
+-------------------------------------------------------------------------------
+Uncontrolled recursion is not usefull.
+
+Controlled recursion can be used for repeatative tasks.
+
+Controlled refcursions
+-> Recursion can be controlled with the help of decision making statements like if, if-else or else-if.
+
+  

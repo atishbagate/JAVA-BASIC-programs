@@ -1,0 +1,32 @@
+/*Convert the given string into uppercase*/
+class A{
+
+	public static void main(String[] args) {
+		System.out.println("main starts..");
+        
+       toUpperCase("This class IS Running!");
+
+		System.out.println("main ends...");
+		return;
+	}
+
+	public static void toUpperCase(String s){
+       System.out.println("toUpperCase starts...");	
+
+       String upperCaseString = "";
+
+       for(int i = 0;i<s.length();i+=1){
+       char c1 = s.charAt(i);/*retriveing a perticular char from String*/ 
+       if(c1>='a'&&c1<='z'){ 
+             upperCaseString += (char)(c1-32);
+           }
+           else{
+           	 upperCaseString += c1;
+           }
+       }
+       System.out.println("The original String : ["+s+"]");
+       System.out.println("uppercase String    : ["+upperCaseString+"]");
+       System.out.println("toUpperCase ends...");
+       return;
+	}
+}

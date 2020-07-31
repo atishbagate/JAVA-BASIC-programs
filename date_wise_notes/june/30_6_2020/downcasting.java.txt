@@ -1,0 +1,68 @@
+class Alpha{
+
+	int i1 = 100;
+
+	public void f1(){
+		System.out.println("f1 of class Alpha");
+	}
+}
+class Charlie extends Alpha{
+
+	int i2 = 200;
+
+	public void f2(){
+		System.out.println("f2 of class Charlie");
+	}
+}
+class Driver{
+
+	public static void main(String[] args) {
+		System.out.println("main starts..");
+        
+        Charlie cRef;
+        cRef = new Charlie();
+        Alpha aRef;
+        /*Upcasting*/
+         aRef = cRef;
+        /*aRef is the Upcasted reference*/
+        System.out.println("aRef : [ "+aRef+" ] ");
+        System.out.println("cRef : [ "+cRef+" ] ");
+        
+    /*Trying to access superclass properties using upcased reference*/
+         System.out.println("i1 "+aRef.i1);
+         aRef.f1();
+    /*Trying to access subclass properties using upcased reference*/
+        /* System.out.println("i2 "+aRef.i2);
+         aRef.f2();
+         We cannot access subclass properties using upcasted reference
+        */ 
+      
+         Charlie cRef2;
+         /*DownCasting*/
+         cRef2 = (Charlie)aRef;
+         /*cRef2 is the DownCasted Reference*/ 
+        
+         /*Trying to access superclass properties using DownCasted reference*/
+         System.out.println("i1 "+cRef2.i1);
+         cRef2.f1(); 
+
+         /*Trying to access subclass properties using DownCasted reference*/
+         System.out.println("i2 "+cRef2.i2);
+         cRef2.f2();
+
+
+        /*
+         _______________ ___ __________________________________________
+        | 11 ns Obj prop|   |               |//upcasted reference |     
+        | i1            |   |               |<--- aRef            |
+        | f1()          |   |_______________|                     |
+        | i2            |   |                                     |<--cRef2
+        | f2()          |   |<------ cRef                         |//downcasted reference
+        |_______________|___|_____________________________________|_____
+
+        */
+
+		System.out.println("main ends...");
+		return;
+	}
+}
