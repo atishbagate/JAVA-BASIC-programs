@@ -1,0 +1,233 @@
+---------------------------------------- Exception Notes --------------------------------------------
+
+
+                                           Exception 
+
+Definition:-
+
+It is an unexpected event which occures at the runtime due to an unexpected operation performed by a single of code which leads to stop the execution of the program abruptly.
+
+
+                                            Error
+
+Defination:-
+An error is an unexpected events which occurs at the runtime due to the malware caused by the software or hardware of the device which leads to stop the execution of the program abruptly.
+
+Errprs cannot be resolved by the programmmer/devloper.
+
+
+------------------------------------------------ Note ------------------------------------------------
+Exceptions can be caused by statements present in functions as well as constructors.
+------------------------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------------------
+                                     Exception hierirachey
+
+-> Exception is a class in java which belong to java.io package.
+-> Error class and Exception class extends Throwable which ectends Object class.
+-> RuntimeException class and IOException Class extend Exception class.
+
+----------------------------------------------------------------------------------------------------
+                   What JVM does When an exception occurs.
+
+1] When an line results in an unexpected operation JVM creates the corresponding exception class object and throws it within the called function.
+
+2] If no code is written to take care of the exception in the called function then JVM will remove the frame from exe and throws the exception object to the calling function.
+
+3] If no code is written to take care of the exception in the calling function then JVM will remove the frame from exe and calls a software called Default Exception Handler(D.E.H).
+
+4] D.E.H will no take care of the exception but it prints 2 importent messages regaring the exception which helps the programmer.
+
+a] Fully qualified exception class name.
+b] Reason for the cause of exception
+3] stackTrace
+-----------------------------------------------------------------------------------------------------
+                            Exception Handling
+
+It is a process in which the programmer handles the exception by write a try and catch block.
+
+syntax:-
+
+try{
+	
+	risky lines of code causing the exception;
+}catch(specific exceptionClass RefVar){
+	
+	alternative lines of code
+}
+
+Exceptions can be handled in 2 locations.
+1] In the called function
+If the exception is handled inside called function then the called function finishes it's execution.
+
+2] In the calling function
+If the exception is handled inside calling function then the called function cannot finish it's execution.
+-----------------------------------------------------------------------------------------------------
+                                   Multiple exception handling
+
+In java multiple line can cause an exception which can be handled by using try and multiple catch blocks.
+
+syntax:-
+     
+try{
+     	risky lines of code causing the exception;
+}catch(specific exceptionClass RefVar1){
+	
+	alternative lines of code
+}      
+catch(specific exceptionClass RefVar2){
+	
+	alternative lines of code
+}               
+Exceptions can be handled in 2 locations.
+1] In the called function
+If the exception is handled inside called function then the called function finishes it's execution.
+
+2] In the calling function
+If the exception is handled inside calling function then the called function cannot finish it's execution.                    
+-------------------------------------------------------------------------------------------------------
+                              Generalized exception handling
+
+We can handle multiple exceptions with one generalized try and catch block.
+
+
+syntax:- 
+
+try{
+     	risky lines of code causing the exception;
+}catch(CommonSuperExceptionClass RefVar1){
+	
+	alternative lines of code
+} 
+
+Exceptions can be handled in 2 locations.
+1] In the called function
+If the exception is handled inside called function then the called function finishes it's execution.
+
+2] In the calling function
+If the exception is handled inside calling function then the called function cannot finish it's execution.   
+
+note:- It is recomended to use Exception or RuntimeException as the CommonSuperExceptionClass RefVar1
+--------------------------------------------------------------------------------------------------------
+                                    Types of exceptions
+
+There are two types of exceptions
+
+1] Checked exceptions
+2] Unchecked exceptions       
+
+1] Checked exceptions
+checked exceptions are the ones which are checked by the compiler.
+i.e if any line of code throws a checked exception, then that method should either handle the exception or propogate the exception to the calling function. 
+
+All the exception classes excluding runtime exception and it's subclass constitutes to checked exception.
+
+
+2] Unchecked exceptions
+Unchecked exceptions are the ones which are not checked by the compiler.
+i.e these exceptions are not forced by the compiler either to handle it or to propogate it.  
+It is left to the programmer to either handle it ot progate it or ignore it.
+
+---------------------------------------------------------------------------------------------------------
+                                    Finally block
+
+Finally block is used to execute mandatory statements in the function irrespective of the exception caused or not caused and handled or not handled.   
+
+finally block cannot exist alone it should be paired with
+1] try - finally
+2] try - catch - finally
+
+
+syntax:- 
+try{
+     	          risky lines of code causing the exception;
+}finally{
+	              mandatory statements to be executed before the frame is removed from stack; 
+}
+ 
+--------------------------- or --------------------------
+
+try{
+     	          risky lines of code causing the exception;
+
+}catch(CommonSuperExceptionClass RefVar1){
+	
+	              alternative lines of code;
+} 
+finally{
+	              mandatory statements to be executed before the frame is removed from stack; 
+}
+
+Note:- Lines inside finally block also may throw exceptions so they can also be surrounded by try-catch blocks.
+
+---------------------------------------------------------------------------------------------------------
+                                      Stack trace
+
+The programmer can explicitly print the stacktrace even if the exception is handled.
+To print the stack trace programmer has to call the function printStackTrace() using the refVar.
+
+printStackTrace() belongs to Trowable class which is overriden in all the subclasses.
+
+Note:- This is only for the programmer/developer reference.
+syntax:- 
+
+In the catch block
+try{
+     	          risky lines of code causing the exception;
+
+}catch(CommonSuperExceptionClass refVar| SpecificExceptionClass refVar){
+	
+                    refVar.printStackTrace();
+
+	              alternative lines of code;
+} 
+--------------------------------------------------------------------------------------------------------
+                                      Exception propagation
+
+It is a process of passing the exception object from called function to the calling function.
+
+Exception propagation can be done using 2 keywords
+
+1] throws 
+2] throw 
+
+----------------------------------------------------------------------------------------------------------
+1] throws -> This keyword can be used to propagate the checked and unchecked exceptions from the called function to the calling function.
+
+when a called function propagates an exception object using throws keyord the calling function can either handle it or it can also propagate it.  
+
+throws key should always be used with the method/constructor declration.
+
+syntax:- 
+
+a.s   a.m   r.t  f.n(a.l) throws exceptionName
+{
+
+}                                       
+----------------------------------------------------------------------------------------------------------
+2] throw -> throw is used by the programmer explicitly to pass the exception object from the called function to the calling function.
+
+throw can only propagate unchecked exceptions. 
+
+throw keyword can be used inside the method/constructor body/definition.
+
+syntax:- 
+
+
+a.s   a.m   r.t  f.n(a.l)
+{
+
+      create exceptionClass Object and use throw key to throw the exception
+
+      throw exceptionClassRefVar;
+
+}
+----------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
