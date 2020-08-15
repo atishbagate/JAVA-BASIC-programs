@@ -1,0 +1,92 @@
+-------------------------------------------- WrapperClassesNotes ----------------------------------------
+
+
+Wrapper classes are used to convert the primitive data into non-primitive or class type of data.
+
+ 
+ byte          -> java.lang.Byte
+ short         -> java.lang.Short
+ int           -> java.lang.Integer
+ long          -> java.lang.Long
+ float         -> java.lang.Float
+ double        -> java.lang.Double
+ char          -> java.lang.Character
+ boolean       -> java.lang.Boolean 
+
+-> All Wrapper classes are declared as public and final.
+-> All Wrapper classes except Character and Boolean extend java.lang.Number class.
+-> All the wrapper classes implement java.lang.Comparable.
+
+--------------------------------------------------------------------------------------------------------  
+
+1] AutoBoxing
+It is a process of conveting a primitive value into it's corresponding WrapperClass Object.
+
+syntax :    WrapperClass refVar = corresponding primitivevalue/var;
+
+2] AutoUnboxing
+It is used to covert the given WrapperClass Object into it's primitive kind of data.
+
+syntax :    primitiveDatatype varName = correspondingWrapperClass refVar;
+
+AutoBoxing is mandatory for AutoUnBoxing.
+
+--------------------------------------------------------------------------------------------------------
+Parse functions
+
+These functions can be used to conver any String data into it's corresponding Wrapper class data.
+All 8 WrapperClasses have corresponding parse methods.
+
+All the wrapper classes override the hashCode,equals and toString function of Object class.
+
+All of the wrapper class's overriden hashCode functions return an unique integer value which is generated based on the primitive value present in their objects.
+
+All of the wrapper class's overriden equals functions return a boolean value by comparing the primitive value present inside them.
+
+All of the wrapper class's overriden toString functions return a String value by converting theprimitive value present inside them.
+-----------------------------------------------------------------------------------------------------------
+Command Line arguments
+
+We can pass command line inputs to main function which will be string in a var called -> args <- of type String[].
+
+To pass the value to the main function using CommandLinePrompt
+
+1] Compile the program using -> javac JavaFileName.java
+2] Run the program using     -> java ClassNameContaingMainFunction arg1 arg2 arg3 etc....
+
+ex: 
+F:\cp\beca4\Libraries_and_API's\WrapperClasses>javac CMDargs.java
+
+F:\cp\beca4\Libraries_and_API's\WrapperClasses>java A{ClassNameContaingMainFunction} hello{arg1} everyone{arg2} !{arg3}
+
+o/p 
+
+main starts...
+hello
+everyone
+!
+main ends...
+
+In intelliJ -> toolBar -> run -> edit Confuguration -> Program arguments -> Type Values -> apply -> ok -> Run program.  
+
+In ecliplse -> toolBar -> run ->Confuguration -> Program arguments -> Type Values -> apply -> ok -> Run program.   
+
+------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
