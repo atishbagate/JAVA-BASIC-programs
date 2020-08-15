@@ -1,0 +1,204 @@
+------------------------------------------------------ Threads Notes ------------------------------
+
+
+Threads the independent parts of the same program which gets it's own stack and CPU time for execution.
+
+Threads are used to perform multitasking in the an application.
+Threads require a part of the processor to execute.
+
+
+
+Whenever JVM starts the program execution by default 3 Threads execute parallely.
+1] Main thread
+2] Garbage Collector thread
+3] Thread Scheduler thread
+
+------------------------------------------------------------------------------------------------
+
+In java we have a built library class and an interface to create threads.
+
+
+1] Creation of thread by using Thread Class.
+
+
+Thread class belong to package java.lang.
+Fully qualified class Name of Thread class -> java.lang.Thread
+
+
+Steps to create a thread by using java.lang.Thread class
+
+a] Create a programmer defined Thread class and Make it extend the java.lang.Thread class. 
+
+b] Override the function -> run <- present in java.lang.Thread class in your custom Thread class.
+
+c] Write the neccessary logic to run in a thread.
+
+d] In the main function create the custom Thread class object(Subclass object) and invoke the function start() to start the thread execution.  
+
+e] start() implecitly call the run().
+
+
+syntax:- 
+
+class CustomThread extends java.lang.Thread{
+
+   @Override 
+   public void run(){
+
+        buisness logic;
+
+   }
+
+}
+
+class Driver {
+
+      p . s . v . main(String[] args){
+
+           
+           new CustomThread().start();
+   }
+}
+
+Note:- Thread class implements Runnable interface and overrides the abstract run() in it's class.
+------------------------------------------------------------------------------------------------
+ 
+2] Creation of thread by using Runnable interface.
+
+Runnable interface is a functional interface present in package java.lang .
+Its fullyqualified interface name is java.lang.Runnable
+
+It contains only one abstract function run().
+
+steps to create thread by using Runnable interface
+
+a] create a programmer defined thread class amd implement java.lang.Runnable interface. 
+
+b] Override the abstract run function in your custom thread class.
+
+c] Write the buisness logic in the run() which has to be executed during the thread execution.
+
+d] In the main() create the custom thread class object and pass it's address to the java.lang.Thread class constructor.	
+
+e] Using the java.lang.Thread class object class the start() which will implecitly class the overriden run() of custom thread class.	
+
+syntax:- 
+
+class customThread implements java.lang.Runnable{
+	
+	@Override
+	public void run(){
+
+      buisness logic;
+      return;
+    }
+}
+
+class Driver{
+	
+	p . s . v . main(String[] args){
+
+     customThread ct = new customThread();
+
+     java.lang.Thread t = new java.lang.Thread(ct); 
+
+     t.start();
+
+     return;
+    }
+}
+------------------------------------------------------------------------------------------------
+
+Alternate Thread creation
+
+Threas can be created by using lambda expressions
+
+
+syntax:-
+
+
+class Driver{
+	
+
+	p . s . v .main(String[] args){
+
+        
+        Runnable refVar = ()->
+                          {
+
+                            buisness logic;
+                          	retun;
+                          };
+
+      java.lang.Thread t = new java.lang.Thread(refVar);
+      t.start();                   
+
+   }
+}
+
+------------------------------------------------------------------------------------------------
+Pausing a Thread
+
+A Thread can pause it's execution with the help of a function called sleep.
+
+Sleep function belong to java.lang.Thread class, it has two overloaded function.
+------------------------------------------------------------------------------------------------
+public static void sleep(long milliSeconds) throws java.lang.IllegalArgumentException,
+java.lang InterruptedException 
+
+-> This function can pause the execution of the current thread for a specified amount of milliseconds and let other threads finish their execution
+
+------------------------------------------------------------------------------------------------
+public static void sleep(long milliSeconds,int nanoSeconds) throws java.lang.IllegalArgumentException,
+java.lang InterruptedException 
+
+-> This function can pause the execution of the current thread for a specified amount of milliseconds, nanoseconds and let other threads finish their execution
+------------------------------------------------------------------------------------------------
+
+IllegalArgumentException
+-> This exception is thrown by the sleep method if the specified milli second is negative.
+-> This is an unchecked execption hence called function should decide wether to handle it or proagate it or ignoreit.
+
+Interrupted exeption
+-> This execption is caused by the sleep method when a thread which is under sleep is invoked suddenly.
+-> This is a checked exception hence compiler forces the called function to either handle or propagate.
+
+
+note :- The range of input should be within 0-999999 for nanoseconds.
+
+------------------------------------------------------------------------------------------------
+                                   Race Condition
+
+When multiple threads try to access same resouce at the same time then the threads lead to race condition.
+We get inconsistend outputs due to race condition. 
+
+Race condition can be eliminated with the help of synchronization.
+
+Synchronization is a process where we let the threads access the shared resource one after the other.
+
+Synchronization can be done in two ways
+
+1] Synchronized function
+We can sychronize the function by using the keyword synchronized in the function declration.
+
+syntax:-
+
+synchronized a.s a.m r.t f.n(a.l){
+  
+    buiseness logics;
+}
+
+note:- Programmer can synchronize resources only for custom classes.
+
+-----------------------------------------------------------------------------------------------------------
+Programmers cannot synchronize built-in resources
+
+When we are using buit-in resouces in Threads we can synchronize the built-in class objects with the help of synchronized blocks.
+
+syntax:- 
+
+synchronized(built-in class object refVar){
+  
+     buiseness logics;
+}
+------------------------------------------------------------------------------------------------------------

@@ -1,0 +1,55 @@
+-------------------------------------------- StringClassNotes -------------------------------------------
+
+-> String class belong to java.lang package.
+-> String class is the immediate subclass of object class.
+-> String class implements java.io.Serializable,java.lang.Comparable,java.lang.CharSequence.
+-> String class is declared public.
+-> String class is declared final.
+
+String class Object can be created in two ways 
+
+1] By using CharLiteral
+
+syntax :-   String refVar = "value";
+
+2] By using String class Constructors
+
+There are 16 overloaded constructors in String class.
+
+-> Most commonly used constructor is
+
+public java.lang.String(java.lang.String);
+
+syntax:- String refVar = new String("value");
+
+To compare two String objects addresses we need to use refVar1 == refVar2
+---------------------------------------------------------------------------
+
+String class overrides Object classes 3 functions.
+
+1] public int hashCode();
+This hashCode function of String class returns an unique integer value which is generated based on the characters present in the String object.
+
+2] public boolean equals(java.lang.Object);
+This equals function of String class compares the given two String values and retur true if the values are same else it returns false.
+
+
+3] public java.lang.String toString();
+This toString function of String class return the String value present in the object.
+
+---------------------------------------------------------------------------------------
+-> String class is not Thread safe since none of it's functions are synchronizes.
+---------------------------------------------------------------------------------------
+
+ String class is immutable
+
+ If a String object is crated and if we try to modifiy it, jvm will never alter the existing object instead it creates new object with the modified data.The reference variable which was pointing towards the old object now starts pointing towards new object leaving the old object dereferenced.   
+
+ Disadvantage :-
+
+ Multiple modifications done on a String object results in multiple dereferenced objects. If the amount of dereferenced objects increase jvm might throw outOfMemoryError.
+
+ Advantage :- 
+
+ If two String class refVars are pointig towards same String Object if changes done to the String object using one refVar will not affect the String Object when accessed from second refVar.
+ -----------------------------------------------------------------------------------------------------------
